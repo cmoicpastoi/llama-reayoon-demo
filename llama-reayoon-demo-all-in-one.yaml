@@ -83,7 +83,7 @@ spec:
     spec:
       containers:
       - name: llama
-        image: ghcr.io/abetlen/llama-cpp-python:latest
+        image: 130953309093.dkr.ecr.ap-northeast-2.amazonaws.com/llama-cpp-demo:latest
         command: ["/bin/sh", "-c"]
         args:
           - |

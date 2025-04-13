@@ -1,1 +1,11 @@
 llama-cpp-python
+uvicorn
+fastapi
+sse-starlette
+flask
+numpy
+scipy
+starlette-context
+httpx
+pydantic
+pydantic-settings
