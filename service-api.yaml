@@ -1,1 +1,12 @@
-# service for llama api
+apiVersion: v1
+kind: Service
+metadata:
+  name: llama-api
+spec:
+  selector:
+    app: llama-api
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+  type: NodePort

@@ -1,1 +1,12 @@
-# service for web ui
+apiVersion: v1
+kind: Service
+metadata:
+  name: llama-web
+spec:
+  selector:
+    app: llama-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer

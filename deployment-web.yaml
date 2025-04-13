@@ -1,1 +1,26 @@
-# deployment for web ui
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llama-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: llama-web
+  template:
+    metadata:
+      labels:
+        app: llama-web
+    spec:
+      containers:
+      - name: llama-web
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: web-content
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: web-content
+        configMap:
+          name: llama-web-content
